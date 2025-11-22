@@ -22,7 +22,7 @@ const fetchMovies = async () => {
     setLoading(true)
 
     setMoviesArray([])
-    const response = await  axios.post(`http://localhost:3000/movieApp/movie`, {prompt})
+    const response = await  axios.post(`https://movirai-backend.onrender.com/movieApp/movie`, {prompt})
 
     console.log(response.data)
     const rec = response.data.recommended
@@ -76,7 +76,7 @@ setMovieObject(result)
 async function getMovieTrailerUrl(movieObject) {
 
     
-        const res = await axios.post("http://localhost:3000/movieApp/trailer", {movie: movieObject})
+        const res = await axios.post("https://movirai-backend.onrender.com/movieApp/trailer", {movie: movieObject})
 
         const url = res.data.data.url
         return url
