@@ -22,11 +22,11 @@ export const Movies = () => {
     
   return (
     <>
-    {moviesArray.length > 0 && (<p className='text-center text-3xl py-3'>Recommended Movies</p>
+    {moviesArray.length > 0 && (<p className='text-center text-xl sm:text-2xl md:text-3xl py-3'>Recommended Movies</p>
 )}
-    <div className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]  gap-6 p-4 sm:p-6 w-full mx-auto' >
+    <div className='grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]  gap-6 p-3 sm:py-3 sm:p-6 w-full mx-auto' >
        
-        {moviesArray.map((movie, index) =>( <div key={index} onClick={()=> fetchOneMovieDetails(movie.Title)}  className='transform hover:scale-105 transition-transform duration-300 cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-2xl border-2 border-red-500 w-full'>
+        {moviesArray.map((movie, index) =>( <div key={index} onClick={()=> fetchOneMovieDetails(movie.Title)}  className='transform hover:scale-105 transition-transform duration-300 cursor-pointer rounded-xl overflow-hidden shadow-lg hover:shadow-2xl border-2 border-[rgba(0,49,70,0.24)] w-full'>
              
             <Card movie={movie}  />
             </div>))}
